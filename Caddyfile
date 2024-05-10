@@ -1,0 +1,11 @@
+{
+    auto_https off
+}
+
+:80 {
+    root * /srv/
+    rewrite / /index.html
+    file_server
+    encode zstd gzip
+    header Cache-Control max-age=3600
+}

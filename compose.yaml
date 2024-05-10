@@ -1,0 +1,18 @@
+services:
+  caddy:
+    image: caddy
+    restart: unless-stopped
+    networks:
+      - caddy
+    labels:
+      caddy: clauzier.dev
+      caddy.reverse_proxy: "{{upstreams http}}"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./dist:/srv
+      - ./data:/data
+      - ./config:/config
+
+networks:
+  caddy:
+    external: true

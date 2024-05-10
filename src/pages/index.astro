@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components'
+---
+
+<Layout title="Antonin CLAUZIER">
+	<main class="h-screen flex items-center justify-center">
+		<div>
+			<div class="py-8 -mr-10 text-center">
+				<h1 class="text-6xl md:text-8xl">slt c<span class="text-7xl md:text-9xl anto pr-10">anto</span></h1>
+			</div>
+			<div>
+				<h2 class="text-center md:text-2xl">Lead Dev @ <a class="underline" href="https://audiowizard.fr">AudioWizard</a></h2>
+				<h3 class="text-center md:text-2xl">& plein d'autres trucs !</h3>
+			</div>
+		</div>
+
+		<div class="absolute bottom-0 mx-auto py-8 space-x-7 md:space-x-14">
+			<a href="https://linkedin.com/in/0x346e3730"><Icon class="text-4xl" name="ph:linkedin-logo-thin"/></a>
+			<a href="https://github.com/0x346e3730"><Icon class="text-4xl" name="ph:github-logo-thin"/></a>
+			<a href="https://x.com/0x346e3730"><Icon class="text-4xl" name="ph:x-logo-thin"/></a>
+			<a href="https://instagram.com/0x346e3730"><Icon class="text-4xl" name="ph:instagram-logo-thin"/></a>
+			<a href="https://twitch.com/0x346e3730"><Icon class="text-4xl" name="ph:twitch-logo-thin"/></a>
+		</div>
+	</main>
+
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.anto {
+		font-family: WindSong, sans-serif;
+		background: linear-gradient(22deg, mediumpurple, deepskyblue);
+		background-size: 400% 400%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		-webkit-animation: AntoLaZone 5s ease infinite;
+		-moz-animation: AntoLaZone 5s ease infinite;
+		-o-animation: AntoLaZone 5s ease infinite;
+		animation: AntoLaZone 5s ease infinite;
+	}
+
+	@-webkit-keyframes AntoLaZone {
+		0%{background-position:0% 91%}
+		50%{background-position:100% 10%}
+		100%{background-position:0% 91%}
+	}
+	@-moz-keyframes AntoLaZone {
+		0%{background-position:0% 91%}
+		50%{background-position:100% 10%}
+		100%{background-position:0% 91%}
+	}
+	@-o-keyframes AntoLaZone {
+		0%{background-position:0% 91%}
+		50%{background-position:100% 10%}
+		100%{background-position:0% 91%}
+	}
+	@keyframes AntoLaZone {
+		0%{background-position:0% 91%}
+		50%{background-position:100% 10%}
+		100%{background-position:0% 91%}
+	}
+
+	svg {
+		display: inline-block;
+	}
+</style>
